@@ -1126,14 +1126,14 @@ button:hover {
   }
  
 
-  .isotope-item {
-    flex-basis: calc(25% - 10px); /* Adjust the width and spacing as needed */
-    margin-right: 10px; /* Adjust the spacing between cards as needed */
-    margin-bottom: 10px; /* Adjust the spacing between rows as needed */
+  /* .isotope-item {
+    flex-basis: calc(25% - 10px);
+    margin-right: 10px; 
+    margin-bottom: 10px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+  } */
   
   .isotope-item:nth-child(4n+1) {
     clear: none;
@@ -1284,6 +1284,26 @@ button:hover {
 
 section.contact-me {
     border-bottom: none;
+    margin-top: 5rem;
+    margin-bottom: 20rem;
+}
+.contact-me__last{
+  margin-top: -60rem;
+}
+
+.contact-me__last textarea {
+  color: #000000 !important;
+}
+.footer_last{
+  /* margin-top: -30rem; */
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  left: 26%;
+  color: #1e1e1e;
+  margin-top: -25rem;
+  /* justify-content: center; */
 }
 
 #contact input {
@@ -1299,6 +1319,8 @@ section.contact-me {
     padding-left: 15px;
 }
 .contact-me input[type="text"],
+.contact-me__last input[type="text"],
+
 .contact-me textarea {
   color: #000000 !important;
 }
@@ -1421,12 +1443,32 @@ section.contact-me {
   
   @media (max-width: 768px) {
     .contact-me{
-      margin-top: 20rem;
-      z-index: -1;
+    margin-top: 15rem; 
+    margin-bottom: 2rem; 
+    position: relative;
+    z-index: -1; 
     }
+   .section-heading_last {
+    margin-top: 70%; 
+    margin-bottom: -18rem; 
+  } 
+
     .right-image {
       margin-right: 1.5rem;
     }
+    .contact-me__last{
+  margin-top: -10rem !important;
+}
+.footer_last{
+  margin-top: -12rem;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  left: 4%;
+  color: #1e1e1e;
+  /* justify-content: center; */
+}
     
     .card,
     .card2 {
@@ -1453,7 +1495,25 @@ section.contact-me {
   }
   
   
-@media screen and (max-width: 1680px) {
+  @media (min-width:780px) and (max-width: 1680px) {
+
+   .section-heading_last {
+    margin-top: -5rem;  
+  } 
+  .contact-me__last{
+  margin-top: -50rem !important;
+}
+.footer_last{
+  /* margin-top: -30rem; */
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  left: 26%;
+  color: #1e1e1e;
+  margin-top: -15rem;
+  /* justify-content: center; */
+}
     .menu {
         left: 5%;
     }
@@ -1465,6 +1525,33 @@ section.contact-me {
         left: 30%;
     }
 }
+@media screen and (width: 800px) {
+  .footer_last{
+  /* margin-top: -30rem; */
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  left: 17%;
+  color: #1e1e1e;
+  margin-top: -51rem;
+  /* justify-content: center; */
+}
+}
+@media screen and (width: 428px) {
+  .footer_last{
+  /* margin-top: -30rem; */
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  left: 3%;
+  color: #1e1e1e;
+  margin-top: -25rem;
+  /* justify-content: center; */
+}
+}
+
 
 @media screen and (max-width: 1680px) and (min-width: 846px) { 
     .menu .social-network ul li a {
@@ -1824,85 +1911,91 @@ section.contact-me {
         <div class="container">
           <div class="section-heading_last">
             <h2>Contact Us</h2>
-
+          </div>
+        </div>
+      </section>
+      
+      <section class="section contact-me__last" data-section="section4">
+        <div class="container">
           <div class="row">
             <div class="right-content">
-              <div class="container">
-                <form id="contact" action="" method="post">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="name"
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          placeholder="Your name..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="email"
-                          type="text"
-                          class="form-control"
-                          id="email"
-                          placeholder="Your email..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input
-                          name="subject"
-                          type="text"
-                          class="form-control"
-                          id="subject"
-                          placeholder="Subject..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea
-                          name="message"
-                          rows="6"
-                          class="form-control"
-                          id="message"
-                          placeholder="Your message..."
-                          required=""
-                        ></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Send Message
-                        </button>
-                      </fieldset>
-                    </div>
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-md-6">
+                    <fieldset>
+                      <input
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Your name..."
+                        required=""
+                      />
+                    </fieldset>
                   </div>
-                </form>
-              </div>
+                  <div class="col-md-6">
+                    <fieldset>
+                      <input
+                        name="email"
+                        type="text"
+                        class="form-control"
+                        id="email"
+                        placeholder="Your email..."
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <input
+                        name="subject"
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        placeholder="Subject..."
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <textarea
+                        name="message"
+                        rows="6"
+                        class="form-control"
+                        id="message"
+                        placeholder="Your message..."
+                        required=""
+                      ></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">
+                        Send Message
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
-
+        </div>
+      </section>
+      
+      <section class="section footer-section">
+        <div class="container">
           <div class="line-dec"></div>
-          <span>
+          <span class="footer_last">
             Aureolin Research, Consultancy & Expertise Development Foundation <br>
             House 463, Flat 5A & 6A, Road 7, Avenue 5 <br>
             Mirpur DOHS, Dhaka 1216, Bangladesh <br>
             info@arced.foundation <br>
             +880 251 051 088 <br>
-            </span>
-        </div>
+          </span>
         </div>
       </section>
-    </div>
+      
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
